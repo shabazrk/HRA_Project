@@ -1,0 +1,25 @@
+package com.HRA.ObjectRepo;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class DetailsUpdatePage {
+
+	public DetailsUpdatePage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy (xpath = "//a[.='Complaint']")
+	private WebElement ComplaintBtn;
+
+	public WebElement getComplaintBtn() {
+		return ComplaintBtn;
+	}
+	
+	//business libraries
+	public void clickOnComplaint() {
+		ComplaintBtn.click();
+	}
+}
